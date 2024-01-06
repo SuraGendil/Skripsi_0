@@ -10,6 +10,7 @@ app.config['MYSQL_HOST']= 'localhost'
 app.config['MYSQL_USER']= 'root'
 app.config['MYSQL_PASSWORD']= ''
 app.config['MYSQL_DB']= 'db_tskrip'
+
 mysql = MySQL(app)
 
 # Merupakan fungsi untuk saat awal website diakses
@@ -20,7 +21,33 @@ def index():
 # Merupakan fungsi untuk saat membuka bagian untuk menambahkan jadwal atau dosen
 @app.route("/add")
 def add():
-    return render_template("add.html")
+    cur = mysql.connection.cursor()
+
+    user = cur.execute("SELECT Gedung FROM `kgedung`")
+    
+    if user > 0:
+        Gedung_Data = cur.fetchall()
+
+    user_2 = cur.execute("SELECT * FROM `jadwal`")
+
+    if user_2 > 0:
+        Ruangan = cur.fetchall()
+
+    user_3 = cur.execute("SELECT * FROM `hari`")
+
+    if user_3 > 0:
+        Hari = cur.fetchall()
+
+    user_4 = cur.execute("SELECT * FROM waktu")
+
+    if user_4 > 0:
+        Waktu = cur.fetchall()
+    
+    # cur.close()
+
+    # print(gedung_data)  # Cetak data gedung di konsol
+
+    return render_template('add.html', Gedung_Data=Gedung_Data,Ruangan=Ruangan, Hari=Hari, Waktu=Waktu)
 
 # Merupakan fungsi untuk membuka bagian untuk menampilkan dashboard
 @app.route("/dashboard")

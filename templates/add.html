@@ -88,22 +88,50 @@
 
     <!-- Tambahkan tag article di bawah pemisah -->
     <article class="article-container">
-        <!-- Isi artikel sesuai kebutuhan -->
-        <!-- <h2>Judul Artikel</h2>
-        <p>Isi artikel Anda di sini...</p> -->
+        <h2>Tambah Data</h2>
+        <form id="addDataForm">
+            <label for="gedung">Gedung:</label>
+            <select id="gedung" name="gedung">
+                {% for kgedung in Gedung_Data %}
+                    <option value="{{ kgedung[0] }}">{{ kgedung[0] }}</option>
+                {% endfor %}
+            </select>
+    
+            <label for="mataKuliah">Mata Kuliah:</label>
+            <input type="text" id="mataKuliah" name="mataKuliah" required>
+    
+            <label for="ruangan">Ruangan:</label>
+            <select id="ruangan" name="ruangan">
+                <!-- Opsi dropdown untuk ruangan -->
+                {% for jadwal in Ruangan %}
+                    <option value="{{ jadwal[1] }}">{{ jadwal[1] }}</option>
+                {% endfor %}
+                <!-- Tambahkan opsi sesuai kebutuhan -->
+            </select>
+    
+            <label for="hari">Hari:</label>
+            <select id="hari" name="hari">
+                <!-- Opsi dropdown untuk hari -->
+                {% for hari in Hari %}
+                    <option value="{{ hari[1] }}">{{ hari[1] }}</option>
+                {% endfor %}
+                <!-- Tambahkan opsi sesuai kebutuhan -->
+            </select>
+    
+            <label for="jam">Jam :</label>
+            <select id="jam" name="jam">
+                <!-- Opsi dropdown untuk jam mulai -->
+                {% for waktu in Waktu %}
+                    <option value="{{ waktu[1] }}">{{ waktu[1] }}</option>
+                {% endfor %}
+                <!-- Tambahkan opsi sesuai kebutuhan -->
+            </select>
+    
+            <button type="clear">clear</button>
+            <button type="submit">Tambahkan Data</button>
+        </form>
     </article>
-
-    <!-- <section class="main">
-        <div class="main-top">
-            <h3><i class='bx bx-bar-chart-alt-2'></i> Dashboard</h3>
-        </div>
-        <div class="main-dashboard">
-            <div class="card"> -->
-                <!-- Isi card sesuai kebutuhan -->
-            <!-- </div>
-        </div>
-    </section> -->
-
+    
     <!-- Pindahkan script ke bagian bawah -->
     <script src="{{url_for('static', filename='all.js')}}"></script>
 </body>
