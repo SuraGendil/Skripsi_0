@@ -23,8 +23,13 @@ def add():
     return render_template("add.html")
 
 # Merupakan fungsi untuk membuka bagian untuk menampilkan dashboard
-@app.route('/RuanganSenin')
-def RuanganSenin():
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
+# Merupakan fungsi untuk membuka bagian untuk menampilkan Ruangan
+@app.route('/Ruangan')
+def Ruangan():
     cur = mysql.connection.cursor()
 
     user = cur.execute("SELECT * FROM `jdosen`")
@@ -42,7 +47,9 @@ def RuanganSenin():
     if day > 0:
         userDetails_3 = cur.fetchall()
     
-    return render_template('RuanganSenin.html', userDetails=userDetails,userDetails_2=userDetails_2,userDetails_3=day)
+    return render_template('Ruangan.html', userDetails=userDetails,userDetails_2=userDetails_2,userDetails_3=day)
 
+# Membuat dimana tidak udah melakukan debungging secara 
+# Terus menerus saat ada perubahan
 if __name__ == "__main__":
     app.run(debug=True, port=12122)

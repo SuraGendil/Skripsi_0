@@ -512,3 +512,38 @@ td {
 }
 
 /* Akhir update articel 28 Desember 2023 */
+
+/* Awal update 06 Desember 2024 */
+/* Awal update 06 Desember 2024 */
+.ruang-kelas,
+.kapasitas-ruangan,
+.sks-dosen,
+.jadwal-dosen {
+    background-color: #f1f1f1;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden; /* Menambahkan properti overflow untuk mengatasi isu floating element */
+}
+
+.ruang-kelas h1,
+.kapasitas-ruangan h1,
+.sks-dosen h1,
+.jadwal-dosen h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Mengubah warna teks untuk meningkatkan kontras */
+}
+
+.ruang-kelas p,
+.kapasitas-ruangan p,
+.sks-dosen p,
+.jadwal-dosen p {
+    font-size: 14px;
+    margin-top: 0;
+    color: #555; /* Mengubah warna teks untuk meningkatkan kontras */
+}
+
+/* Akhir update 06 Desember 2024 */
+/* Akhir update 06 Desember 2024 */
