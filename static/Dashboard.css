@@ -520,8 +520,8 @@ td {
 .sks-dosen,
 .jadwal-dosen {
     background-color: #f1f1f1;
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
     overflow: hidden; /* Menambahkan properti overflow untuk mengatasi isu floating element */

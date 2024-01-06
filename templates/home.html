@@ -9,7 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Dashboard Sidebar Menu | Dark/Light Mode</title>
 
-    <!-- Tambahkan class "dark" pada body jika dark mode aktif -->
+    <!-- Script untuk class "dark" pada body jika dark mode aktif -->
     <script>
         if (localStorage.getItem('dark-mode') === 'enabled') {
             document.body.classList.add('dark');
@@ -18,7 +18,9 @@
 </head>
 
 <body>
+    <!-- Awal Side Bar -->
     <nav class="sidebar close">
+        <!-- Awal Logo &  Name Logo -->
         <header>
             <div class="image-text">
                 <span class="image">
@@ -32,7 +34,9 @@
 
             <i class="bx bx-chevron-right toggle"></i>
         </header>
+        <!-- Akhir Logo &  Name Logo -->
 
+        <!-- Awal Bagian Dari Side bar -->
         <div class="menu-bar">
             <div class="menu">
                 <ul class="menu-links">
@@ -79,56 +83,42 @@
                 </ul>
             </div>
         </div>
+        <!-- Akhir Bagian Side Bar -->
     </nav>
+    <!-- Akhir Side Bar -->
+
+    <!-- Awal Main Home  -->
     <section class="home">
         <i c class='bx bx-home icon'></i>
         <span class="text">Home</span>
     </section>
+    <!-- Akhir Main Home -->
 
-    <!-- Elemen Pemisah -->
+    <!-- Awal Elemen Pemisah -->
     <div class="separator"></div>
+    <!-- Akhir Elemen Pemisah -->
 
-    <!-- Tambahkan tag article di bawah pemisah -->
+    <!-- Awal tag article di Main Home  -->
     <article class="article-container">
-        <!-- <h2>Senin</h2> -->
-        <!-- <h3>, 1 Januari 2050</h3> -->
-        <!-- Isi artikel sesuai kebutuhan -->
-        <!-- <h2>Judul Artikel</h2>
-        <p>Isi artikel Anda di sini...</p> -->
         <p>Selamat Datang di sistem Aplikasi <b>Jadwal FPMIPA UPI</b> Terintegrasi</p>
-        <p>Sistem ini adalah satu satunya layanan akademik untuk mahasiswa UPI yang memuat 
-            seluruh aktifitas utama administrasi akademik yang antara lain berisi fitur-fitur 
-            manajemen DIM (Data Induk Mahasiswa), pengajuan IRS dan PRS, informasi Kalender Akademik, 
-            informasi Jadwal Kuliah, riwayat status akademis, riwayat capaian nilai dan transkip nilai sementara, 
+        <p>Sistem ini adalah satu satunya layanan akademik untuk mahasiswa UPI yang memuat
+            seluruh aktifitas utama administrasi akademik yang antara lain berisi fitur-fitur
+            manajemen DIM (Data Induk Mahasiswa), pengajuan IRS dan PRS, informasi Kalender Akademik,
+            informasi Jadwal Kuliah, riwayat status akademis, riwayat capaian nilai dan transkip nilai sementara,
             termasuk didalamnya berita akademik.</p>
-            
-            Sistem ini menggunakan Single Sign On UPI sebagai fitur otentifikasi, dan dikembangkan dengan 
-            insfrastruktur internet sehingga dapat diakses di mana saja sesuai dengan kondisi dan kebutuhan. 
-            Data yang dimunculkan merupakan replikasi dari data pada SIAK Utama UPI, jika terdapat perbedaan, 
-            maka data pada SIAK Utama sebagai rujukan yang dianggap benar.
-            
-            Terima kasih.</p>
+
+        Sistem ini menggunakan Single Sign On UPI sebagai fitur otentifikasi, dan dikembangkan dengan
+        insfrastruktur internet sehingga dapat diakses di mana saja sesuai dengan kondisi dan kebutuhan.
+        Data yang dimunculkan merupakan replikasi dari data pada SIAK Utama UPI, jika terdapat perbedaan,
+        maka data pada SIAK Utama sebagai rujukan yang dianggap benar.
+
+        Terima kasih.</p>
     </article>
+    <!-- Akhir tag article di Main Home  -->
 
-    <!-- <section class="main">
-        <div class="main-top">
-            <h3><i class='bx bx-bar-chart-alt-2'></i> Dashboard</h3>
-        </div>
-        <div class="main-dashboard">
-            <div class="card"> -->
-    <!-- Isi card sesuai kebutuhan -->
-    <!-- </div>
-        </div>
-    </section> -->
-
-    <!-- Pindahkan script ke bagian bawah -->
+    <!-- Awal script -->
     <script src="{{url_for('static', filename='all.js')}}"></script>
+    <!-- Akhir script -->
 </body>
 
 </html>
-
-
-
-
-
-
