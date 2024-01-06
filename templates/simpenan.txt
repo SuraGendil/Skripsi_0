@@ -272,3 +272,29 @@ INSERT INTO `jdosen` (`id_Jdosen`, `Hari`, `Ruangan`, `Jam`, `Dosen`) VALUES (NU
 INSERT INTO `jdosen` (`id_Jdosen`, `Hari`, `Ruangan`, `Jam`, `Dosen`) VALUES (NULL, 'Senin', 'Ruang Kelas C - 107 S2 / S3', '15:30-17:10', 'Dr. H. Wiji, M.Si.');
 INSERT INTO `jdosen` (`id_Jdosen`, `Hari`, `Ruangan`, `Jam`, `Dosen`) VALUES (NULL, 'Senin', 'Ruang Kuliah', '13:00-15:30', 'Prof. Dr. Nahadi, M.Pd., M.Si.');
 INSERT INTO `jdosen` (`id_Jdosen`, `Hari`, `Ruangan`, `Jam`, `Dosen`) VALUES (NULL, 'Senin', 'Ruang Kelas S - 302', '15:30-18:00', 'Dr. Wawan Wahyu, M.Pd.');
+
+Kode 
+# @app.route('/tes', methods=['GET', 'POST'])
+# def tes():
+#     if request.method == 'POST':
+#         username = request.form['username']
+#         email = request.form['email']
+
+#         cur = mysql.connection.cursor()
+#         # cur.execute("INSERT INTO table_users (name,email) VALUES (%s,%s)", (username, email))
+#         cur.execute("INSERT INTO table_user (name,email) VALUES (%s,%s)", (username, email))
+#         mysql.connection.commit()
+#         cur.close()
+#         return "Sukses"
+    
+#     return render_template('simple.html')
+
+# @app.route('/tes_2')
+# def tes_2():
+#     cur = mysql.connection.cursor()
+
+#     user = cur.execute("SELECT * FROM table_user")
+
+#     if user > 0:
+#         userDetails = cur.fetchall()
+#         return render_template('user.html', userDetails=userDetails)

@@ -37,7 +37,7 @@
             <div class="menu">
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="/home">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">Home</span>
                         </a>
@@ -83,6 +83,16 @@
     <section class="dashboard">
         <i c class='bx bx-bar-chart-alt-2 icon'></i>
         <span class="text">Dashboard Ruang Kelas senin</span>
+
+        <div class="dashboard-buttons">
+            <button id="button1">Senin</button>
+            <button id="button2">Selasa</button>
+            <button id="button3">Rabu</button>
+            <button id="button4">Kamis</button>
+            <button id="button5">Jumat</button>
+            <!-- Tambahkan tombol lain sesuai kebutuhan -->
+        </div>
+
     </section>
 
     <!-- Elemen Pemisah -->
@@ -100,7 +110,7 @@
                 <tr>
                     <th>Ruangan</th>
                     {% for waktu in userDetails_2 %}
-                        <th>{{ waktu[1] }}</th>
+                    <th>{{ waktu[1] }}</th>
                     {% endfor %}
                 </tr>
             </thead>
@@ -108,17 +118,18 @@
             <tbody>
                 {% for jdosen in userDetails %}
                 <tr>
-                    <tr>
-                        <td>{{ jdosen[2] }}</td>
-                        {% for waktu in userDetails_2 %}
-                            {% if jdosen[3] == waktu[1] %}
-                                <td style="background-color: blue; color: white;">Sudah Digunakan</td>  <!-- Ganti dengan nilai atau logika yang sesuai -->
-                            {% else %}
-                                <td>-</td>  <!-- Ganti dengan nilai atau logika yang sesuai jika tidak cocok -->
-                            {% endif %}
-                        {% endfor %}
-                    </tr>
-                    <!-- Tambahkan kolom lain sesuai dengan struktur tabel Jadwal -->
+                <tr>
+                    <td>{{ jdosen[2] }}</td>
+                    {% for waktu in userDetails_2 %}
+                    {% if jdosen[3] == waktu[1] %}
+                    <td style="background-color: blue; color: white;">Sudah Digunakan</td>
+                    <!-- Ganti dengan nilai atau logika yang sesuai -->
+                    {% else %}
+                    <td>-</td> <!-- Ganti dengan nilai atau logika yang sesuai jika tidak cocok -->
+                    {% endif %}
+                    {% endfor %}
+                </tr>
+                <!-- Tambahkan kolom lain sesuai dengan struktur tabel Jadwal -->
                 </tr>
                 {% endfor %}
                 <!-- <tr>
@@ -155,9 +166,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
