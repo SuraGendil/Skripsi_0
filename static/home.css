@@ -431,32 +431,19 @@ body.dark .switch::before {
 
 .article-container {
     background-color: white;
-    margin-top: 50px;
     padding: 0px 20px 20px 20px;
     max-width: 1500px;
+    margin-top: 50px;
     margin-left: 350px;
     margin-right: 40px;
     margin-bottom: 40px;
-    /* transition: max-width 0.5s ease-in-out; */
     max-height: 825px;
-    /* Sesuaikan tinggi maksimum yang diinginkan */
     overflow-y: auto;
-    /* position: fixed; */
-    /* top: 0; */
-    /* left: 0 */
     height: 100vh;
     overflow-y: auto;
+    display: flex;
 }
 
-
-/* Atau, jika Anda ingin elemen artikel diatur sebagai jendela penuh dengan scroll */
-/* .article-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    overflow-y: auto;
-} */
 
 /* Akhir update articel 24 Desember 2023 */
 
@@ -512,3 +499,27 @@ td {
 }
 
 /* Akhir update articel 28 Desember 2023 */
+
+/* Awal update 06 Januari 2023 */
+.main-article-container{
+    margin-top: 50px;
+    margin-left: 65px;
+    align-items: center;
+    font-size:x-large;
+
+}
+
+
+
+.img-article {
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.img-article img {
+    margin-left: 20px; /* Menambahkan jarak kiri */
+    /* margin-top: 50px; /* Menambahkan jarak atas */
+}
+
+/* Akhir update 06 Januari 2023 */
